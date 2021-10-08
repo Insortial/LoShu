@@ -26,13 +26,13 @@ void createLoShu()
     int randNumber;
     srand((unsigned) time(&t));
     do{
-        for (int i = 0; i < 9; i++) {   
+        for (int i = 1; i < 10; i++) {   
             usedNumbers[i] = i;
         }
 
-        for (int i = 0; i < 9; i++) {    
+        for (int i = 0; i < 10; i++) {    
             int temp = usedNumbers[i];
-            int randomIndex = rand() % 9;
+            int randomIndex = (rand() % 8) + 1;
             usedNumbers[i] = usedNumbers[randomIndex];
             usedNumbers[randomIndex] = temp;
         }
